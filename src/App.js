@@ -1,24 +1,43 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import '../node_modules/react-id-swiper/lib/styles/css/swiper.css';
+import Swiper from 'react-id-swiper';
 
 function App() {
+  const params = {
+    spaceBetween: 30,
+    centeredSlides: true,
+    slidesPerView: 2,
+    slidesPerGroup:1,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    }
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Swiper {...params}>
+          <div className="card">
+            1
+          </div>
+          <div className="card">
+            2
+          </div>
+          <div className="card">
+            3
+          </div>
+          <div className="card">
+            4
+          </div>
+          <div className="card">
+            5
+
+          </div>
+      </Swiper>
     </div>
   );
 }

@@ -31,3 +31,17 @@
     transform: rotate(360deg);
   }
 }
+.swiper-container {
+  height: 300px;
+  width: 80%;
+}
+.card {
+  width: 120px;
+  height: 100%;
+  border: 2px solid red;
+  border-radius: 5px;
+  box-shadow: 0 5px 20px;
+}
+.swiper-button-prev, .swiper-button-next {
+  margin: 0 -10px;
+}
